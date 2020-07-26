@@ -8,6 +8,7 @@
 
                 <div class="col-4">
                     <a class="h3 product-name" v-on:click.stop="doThis">{{search_item.product_title}}</a>
+                    <!-- <router-link>{{search_item.product_title}}</router-link> -->
                     <p>{{search_item.product_id}}</p>
                 </div>
             </div>
@@ -33,9 +34,10 @@ export default {
 
             axios.get(URL_Product).then(
                 (res) => {
-                // this.search_result = res.data.data;
-                    console.log(res.data.data)
+                    // console.log(res.data)
+                    this.$router.push({ name:'Compare',params:{ data: res.data.data } } );
                 }).catch( err => console.log(err));  
+
             
 
         }
