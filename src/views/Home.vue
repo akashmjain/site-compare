@@ -1,0 +1,54 @@
+<template>
+  <div id="app"  class="mt-5">
+    
+    <!-- contains search bar and Search Button -->
+    <Search v-on:search-param="productName"  />
+    <!-- DisplayResult of search operation latter we'll put this data onto a routes -->
+    <DisplayResult v-bind:search_result="search_result"/>
+
+  </div>
+</template>
+
+<script>
+import Search from '../components/Search'
+import DisplayResult from '../components/DisplayResult'
+import axios from 'axios'
+
+
+// API key to get data from price-api dataset
+const API_KEY = 'dZBL0jdoxGMgGcOxH7Os6SKMgoa9WqUACR3';
+
+
+export default {
+  name: 'Home',
+   components: {
+    Search,
+    DisplayResult
+  },
+  data() {
+    return {
+      search_result: [],
+
+    }
+  },
+  methods: {
+    productName(product_name) {
+      // Price-api URL to get data into dictionary searching product by product name
+      const URL = `https://price-api.datayuge.com/api/v1/compare/search?api_key=${API_KEY}&product=${product_name}&page=1`;
+      // REST API get call to get the data and storing the result into a search_result array
+      axios.get(URL).then(
+        (res) => {
+          this.search_result = res.data.data;
+          console.log(this.search_result)
+
+      })
+      .catch((err) => console.log(err));
+
+    },
+  }
+}
+</script>
+
+<style>
+
+</style>
