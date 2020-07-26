@@ -31,5 +31,96 @@ export default {
 }
 </script>
 <style scoped>
+    @media only screen and (max-width: 1280px)
 
+	{
+
+		.search_info {
+			padding-left : 10%;
+		}
+
+	}
+	@media only screen and (max-width: 1024px)
+
+	{
+
+		.search_info {
+			margin-left : 10%;
+		}
+
+	}
+	@media only screen and (max-width: 959px)
+
+	{
+
+		.search_info {
+			padding-left : 10%;
+		}
+
+	}
+	@media only screen and (max-width: 768px)
+
+	{
+
+		.search_info {
+			padding-left : 14%;
+		}
+
+	}
+	@media only screen and (max-width: 699px)
+
+	{
+
+		.search_info {
+			padding-left : 19%;
+		}
+
+	}
+	@media only screen and (max-width: 635px)
+
+	{
+
+		.search_info {
+			padding-left : 30%;
+		}
+
+	}
+	@media only screen and (max-width: 539px)
+
+	{
+
+		.search_info {
+			padding-left : 38%;
+		}
+
+	}
+	@media only screen and (max-width: 479px)
+
+	{
+
+		.search_info {
+			padding-left : 40%;
+		}
+
+	}
+	@media only screen and (max-width: 459px)
+
+	{
+
+		.container-fluid div {
+			display : block
+		}
+		.search_info {
+			padding-left : 0;
+			padding-top : 2%;
+		}
+
+	}
+	@media only screen and (max-width: 360px)
+
+	{
+		.image {
+			padding : 1%;
+		}
+	}
 </style>
