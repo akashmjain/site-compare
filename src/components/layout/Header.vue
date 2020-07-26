@@ -1,8 +1,12 @@
 <template>
     
-    <div>
-        <h1 class="header mb-5">Site Compare application</h1>
+    <div class="header">
+        <h1 >Site Compare application</h1>
+        <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
         
+        </div>
     </div>
 </template>
 <script>
@@ -30,4 +34,4 @@ export default {
 			font : 5px;
 		}
     }
-</style>
+ </style>
