@@ -16,6 +16,13 @@ export default {
   } 
 }
 </script>
+
+
+<style>
+  #app{
+	background : #d7c49eff;
+	padding-bottom : 1%;
+}
+=======
 <style scoped>
 
-</style>
