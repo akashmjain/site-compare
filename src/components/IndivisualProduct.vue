@@ -1,5 +1,5 @@
 <template>
-    <li class="list-group-item" >
+    <li class="list-group-item mr-4" >
         <div class="container-fluid">
             <div class="row">
                 <div class="col-4">
@@ -53,4 +53,7 @@ export default {
         cursor: pointer;
         color: black;
     }
+    //.product-name:visited {
+        color : #3473b6;
+    }//
 </style>
