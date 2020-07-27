@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-4">
-                <img :src="search_item.product_image" width="200" height="200">
+                <img :src="search_item.product_image" width="200px" height="200pxs">
                 </div>  
 
                 <div class="col-4">
@@ -36,7 +36,7 @@ export default {
             axios.get(URL_Product).then(
                 (res) => {
                     // console.log(res.data)
-                    this.$router.push({ name:'Compare',params:{ data: res } } );
+                    this.$router.push({ name:'Compare',params:{ data: res.data.data,  img: this.search_item.product_image, product_name: this.search_item.product_title, product_id: this.search_item.product_id } } );
                 }).catch( err => console.log(err));  
 
             
@@ -53,7 +53,7 @@ export default {
         cursor: pointer;
         color: black;
     }
-    //.product-name:visited {
+    a:visited {
         color : #3473b6;
-    }//
+    }
 </style>
