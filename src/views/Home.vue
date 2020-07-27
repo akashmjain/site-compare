@@ -15,6 +15,7 @@
 import Search from '../components/Search';
 import DisplayResult from '../components/DisplayResult';
 import FooterSearch from '../components/layout/FooterSearch';
+import '../style/intern_project.css';
 import axios from 'axios';
 
 
