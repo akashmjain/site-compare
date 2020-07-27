@@ -2,11 +2,11 @@
     <li class="list-group-item mr-4" >
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4">
+                <div class="col-sm-2 col-lg-4">
                 <img :src="search_item.product_image" width="200px" height="200pxs">
                 </div>  
 
-                <div class="col-4">
+                <div class="search_info col-sm-8 col-lg-4">
                     <a class="h3 product-name" v-on:click.stop="doThis">{{search_item.product_title}}</a>
                     <p>{{search_item.product_id}}</p>
                 </div>
