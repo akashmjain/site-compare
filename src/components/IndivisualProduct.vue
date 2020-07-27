@@ -1,5 +1,5 @@
 <template>
-    <li class="list-group-item" >
+    <li class="list-group-item mr-4" >
         <div class="container-fluid">
             <div class="row">
                 <div class="col-4">
@@ -18,6 +18,7 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import '../style/intern_project.css';
 import axios from 'axios';
 const API_KEY = 'dZBL0jdoxGMgGcOxH7Os6SKMgoa9WqUACR3';
 let URL_Product = ''
@@ -52,4 +53,7 @@ export default {
         cursor: pointer;
         color: black;
     }
+    //.product-name:visited {
+        color : #3473b6;
+    }//
 </style>

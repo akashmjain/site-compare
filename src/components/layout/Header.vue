@@ -1,7 +1,7 @@
 <template>
     
     <div class="header">
-        <h1 >Site Compare application</h1>
+        <h1 >Price Comparison Site</h1>
         <div id="nav">
         <router-link to="/">Home</router-link> | 
         <router-link to="/about">About</router-link>
@@ -18,14 +18,24 @@ export default {
 
 <style scoped>
     .header {
-        background: black;
-        color: white;
+        background: #343148ff;
+        color: #ffffff;
         text-align: center;
         padding: 10px;
-    }
-    .header a {
-        color: white;
-        /* padding-right: 5px; */
-    }
-
+	}
+	.header h1 {
+			font-size : 48px ;
+			font-style : italic;
+			font-variant : small-caps;
+			font-family : 'Arial','sans-serif';	
+	}
+	.header a{
+		color : #ffffff;
+	}
+	@media only screen and (max-width: 479px)
+	{
+		.header h1{
+			font : 5px;
+		}
+	}
 </style>
