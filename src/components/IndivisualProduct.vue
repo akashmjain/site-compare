@@ -8,7 +8,6 @@
 
                 <div class="col-4">
                     <a class="h3 product-name" v-on:click.stop="doThis">{{search_item.product_title}}</a>
-                    <!-- <router-link>{{search_item.product_title}}</router-link> -->
                     <p>{{search_item.product_id}}</p>
                 </div>
             </div>
@@ -30,6 +29,7 @@ export default {
         doThis() {
             // fetch the data from api to show markets for indivsual element
             // console.log(this.search_item);
+
             URL_Product =   `${this.search_item.product_link}&api_key=${API_KEY}`;
 
             axios.get(URL_Product).then(

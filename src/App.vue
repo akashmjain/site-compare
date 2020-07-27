@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <!-- Header of our application -->
+ 
     <Header />
     <keep-alive>
       <router-view />
     </keep-alive>
+
   </div>
 </template>
 

@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import Search from '../components/Search'
-import DisplayResult from '../components/DisplayResult'
-import FooterSearch from '../components/layout/FooterSearch'
-import axios from 'axios'
+import Search from '../components/Search';
+import DisplayResult from '../components/DisplayResult';
+import FooterSearch from '../components/layout/FooterSearch';
+import axios from 'axios';
 
 
 // API key to get data from price-api dataset
@@ -32,13 +32,14 @@ export default {
   data() {
     return {
       search_result: [],
-
+      // Here page number is for google like next page feature
+      page_no: 1
     }
   },
   methods: {
     productName(product_name) {
       // Price-api URL to get data into dictionary searching product by product name
-      const URL = `https://price-api.datayuge.com/api/v1/compare/search?api_key=${API_KEY}&product=${product_name}&page=`;
+      const URL = `https://price-api.datayuge.com/api/v1/compare/search?api_key=${API_KEY}&product=${product_name}&page=${this.page_no}`;
       // REST API get call to get the data and storing the result into a search_result array
       axios.get(URL).then(
         (res) => {

@@ -1,7 +1,10 @@
 <template>
     
     <div>
-        <p>{{ userData}}</p>
+        <!-- assigning data of routes to veriable for data manipulation -->
+        <p hidden> {{userData = $route.params.data}}</p>
+        <!-- printing that data in graphical form -->
+        <p>{{userData}}</p>
     </div>
 
 </template>
@@ -13,10 +16,7 @@ export default {
             userData: []
         }
     },
-    created() {
-        this.userData = this.$route.params.data;
-        console.log(this.userData)
-    }
+    
 }
 </script>
 <style scoped>
