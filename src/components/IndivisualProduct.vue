@@ -35,7 +35,7 @@ export default {
             axios.get(URL_Product).then(
                 (res) => {
                     // console.log(res.data)
-                    this.$router.push({ name:'Compare',params:{ data: res.data.data } } );
+                    this.$router.push({ name:'Compare',params:{ data: res } } );
                 }).catch( err => console.log(err));  
 
             

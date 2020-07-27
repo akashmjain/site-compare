@@ -1,6 +1,7 @@
 <template>
     <div class="pt-4">
         <!-- <p class="pt-2">{{search_result}}</p> -->
+        <!-- Indivisual search component  -->
         <ul v-bind:key="search_item.product_title" v-for="search_item in search_result">
             <IndivisualProduct v-bind:search_item="search_item"/>
 
