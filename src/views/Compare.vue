@@ -14,17 +14,10 @@
                  <h3 class="col-lg-11 mt-0">{{$route.params.product_name}}</h3>
                  <h5 class="col-8"><i>Product Availability :</i></h5>
             
-        <!-- Show Store only if link is available for that store -->
-
-        <ul v-for="store in userData.stores" v-bind:key="store.name" class="list-unstyled" >
-            <li class="list-group-item ml-3" v-if="resultData(store)">
-				Site Name : {{store[brand].product_store}}<br>
-				MRP : {{store[brand].product_price}}<br>
-                <!-- {{store}} -->
-                
-                     <a :href=store[brand].product_store_url>Visit</a>
-             </li>
-        </ul>
+            <!-- Show Store only if link is available for that store -->
+            <ul>
+                <StoreList v-bind:store_array="userData.stores"/>
+            </ul>
 		</div>
 	</div>
     </div>
@@ -32,8 +25,12 @@
 </template>
 <script>
 import '../style/intern_project.css';
+import StoreList from '../components/compare/StoreList'
 export default {
     name: "Compare",
+    components: {
+        StoreList
+    },
     data() {
         return {
             userData: [],
@@ -41,18 +38,21 @@ export default {
         }
     },
     methods: {
-        resultData(store) {
+     /*   resultData(store) {
             // for loop for checking if store contains any data or not
-            for ( this.brand in store)
-            {
-                if (store[this.brand].length === 0) {
-                    return false
-                }
-                else {
-                    return true
-                }
-            }
-        }
+            console.log();
+            console.log(store)
+            // for ( this.brand in store)
+            // {
+
+            //     if (store[this.brand].length === 0) {
+            //         return false
+            //     }
+            //     else {
+            //         return true
+            //     }
+            // }
+        },*/
     }
     
 }

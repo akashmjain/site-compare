@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Search from '../components/Search';
-import DisplayResult from '../components/DisplayResult';
+import Search from '../components/home/Search';
+import DisplayResult from '../components/home/DisplayResult';
 import FooterSearch from '../components/layout/FooterSearch';
 import '../style/intern_project.css';
 import axios from 'axios';

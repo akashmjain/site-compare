@@ -18,7 +18,7 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
-import '../style/intern_project.css';
+import '../../style/intern_project.css';
 import axios from 'axios';
 const API_KEY = 'dZBL0jdoxGMgGcOxH7Os6SKMgoa9WqUACR3';
 let URL_Product = ''
