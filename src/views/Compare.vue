@@ -15,8 +15,10 @@
                  <h5 class="col-8"><i>Product Availability :</i></h5>
             
             <!-- Show Store only if link is available for that store -->
-            <ul>
-                <StoreList v-bind:store_array="userData.stores"/>
+            
+            <ul class="list-unstyled">
+                <!-- <StoreList v-bind:store_array="userData.stores"/> -->
+                <StoreList />
             </ul>
 		</div>
 	</div>
@@ -36,25 +38,7 @@ export default {
             userData: [],
             brand: ''
         }
-    },
-    methods: {
-     /*   resultData(store) {
-            // for loop for checking if store contains any data or not
-            console.log();
-            console.log(store)
-            // for ( this.brand in store)
-            // {
-
-            //     if (store[this.brand].length === 0) {
-            //         return false
-            //     }
-            //     else {
-            //         return true
-            //     }
-            // }
-        },*/
     }
-    
 }
 </script>
 <style scoped>

@@ -4,9 +4,9 @@
         {{brand.product_store}}
 
     </li> -->
-     <li class="list-group-item mr-4 mt-5 media " v-for="brand in brands" :key="brand.product_store">      
+     <li class="list-group-item ml-3 " v-for="brand in brands" :key="brand.product_store">      
         <!-- {{store}} -->
-        <div class="media-body flow">
+        <div class="media-body" id="delete_after_use">
 
                 <p class="h5">{{brand.product_store}}</p>
                 <p class="h6">MRP : {{brand.product_price}}</p>
@@ -25,10 +25,11 @@ export default {
             brands: [],
         }
     },
-    created() {
+    activated() {
+        console.log('activated');
         
         // filter out array which are empty
-        this.store_array.filter(el => {
+        this.$route.params.data.stores.filter(el => {
             if(Array.isArray(el[Object.keys(el)[0]])){
                 return el[Object.keys(el)[0]].length;
             }
@@ -37,7 +38,14 @@ export default {
                 return el[Object.keys(el)[0]]
             }
         });
+    },
+    deactivated() {
+        console.log('deactivated');
+        // let element = document.getElementById('delete_after_use');
+        console.log(document);
 
+        // console.log(element);
+        // element.parentNode.removeChild(element);
     }
 }
 </script>
