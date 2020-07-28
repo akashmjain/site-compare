@@ -18,7 +18,7 @@
             
             <ul class="list-unstyled">
                 <!-- <StoreList v-bind:store_array="userData.stores"/> -->
-                <StoreList />
+                <StoreList v-bind:data="userData.stores"/>
             </ul>
 		</div>
 	</div>

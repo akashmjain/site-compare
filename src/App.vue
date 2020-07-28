@@ -3,7 +3,7 @@
     <!-- Header of our application -->
  
     <Header />
-    <keep-alive>
+    <keep-alive include="Home" >
       <router-view />
     </keep-alive>
 
