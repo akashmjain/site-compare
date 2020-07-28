@@ -1,38 +1,37 @@
 <template>
     
     <div>
-        <!-- assigning data of routes to veriable for data manipulation. hidden vecause it will show data on to a page otherwise -->
+        <!-- assigning data of routes to variable for data manipulation. hidden because it will show data on to a page otherwise -->
         <p hidden> {{userData = $route.params.data}}</p>
         <!-- printing that data in graphical form -->
 
         <!-- Show which product is in question -->
         
 
-        <div class="media component mt-5 ml-5">
-            <img class="mr-3" :src=$route.params.img alt="Generic placeholder image">
+        <div class="media component mt-4">
+            <img class="img-responsive mr-5" :src=$route.params.img alt="Generic placeholder image">
              <div class="media-body">
-                 <h3 class="mt-0">{{$route.params.product_name}}</h3>
-                 <p>{{ $route.params.product_id}}</p>
-            </div> 
-        </div> 
+                 <h3 class="col-lg-11 mt-0">{{$route.params.product_name}}</h3>
+                 <h5 class="col-8"><i>Product Availability :</i></h5>
+            
         <!-- Show Store only if link is available for that store -->
 
         <ul v-for="store in userData.stores" v-bind:key="store.name" class="list-unstyled" >
-            <li class="list-group-item mr-4 mt-5 media" v-if="resultData(store)">
-                <img class="mr-3" :src=store[brand].product_store_logo alt="Generic placeholder image">
+            <li class="list-group-item ml-3" v-if="resultData(store)">
+				Site Name : {{store[brand].product_store}}<br>
+				MRP : {{store[brand].product_price}}<br>
                 <!-- {{store}} -->
-                <div class="media-body">
-                     <!-- <a :href=store[brand].product_store_url class="btn-primary">Visit</a>  -->
-              
-                </div>
-            </li>
+                
+                     <a :href=store[brand].product_store_url>Visit</a>
+             </li>
         </ul>
-
-
+		</div>
+	</div>
     </div>
 
 </template>
 <script>
+import '../style/intern_project.css';
 export default {
     name: "Compare",
     data() {
@@ -59,5 +58,5 @@ export default {
 }
 </script>
 <style scoped>
-
+	
 </style>
