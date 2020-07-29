@@ -19,3 +19,4 @@
   $ npm run serve
   ```
   now your code is up and running. :smile:
+### also change the .env.example to .env and put your own data that is api, you can get api's from respective sites by loging in.
