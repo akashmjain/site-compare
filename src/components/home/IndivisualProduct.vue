@@ -20,7 +20,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import '../../style/intern_project.css';
 import axios from 'axios';
-const API_KEY = 'dZBL0jdoxGMgGcOxH7Os6SKMgoa9WqUACR3';
+require('dotenv').config();
+
+// const API_KEY = 'dZBL0jdoxGMgGcOxH7Os6SKMgoa9WqUACR3';
+const API_KEY = process.env.VUE_APP_API_KEY;
+
+
+
 let URL_Product = ''
 
 export default {
@@ -30,7 +36,7 @@ export default {
         doThis() {
             // fetch the data from api to show markets for indivsual element
             // console.log(this.search_item);
-
+            console.log(process.env.VUE_APP_API_KEY);
             URL_Product =   `${this.search_item.product_link}&api_key=${API_KEY}`;
 
             axios.get(URL_Product).then(

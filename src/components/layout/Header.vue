@@ -4,7 +4,8 @@
         <h1 >Price Comparison Site</h1>
         <div id="nav">
         <router-link to="/">Home</router-link> | 
-        <router-link to="/about">About</router-link>
+        <router-link to="/about">About</router-link> |
+		<router-link to="/contactUs">Contact Us</router-link>
         
         </div>
     </div>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Compare from '../views/Compare.vue'
+import ContactUs from '../views/ContactUs'
 Vue.use(VueRouter)
 
   const routes = [
@@ -23,6 +24,11 @@ Vue.use(VueRouter)
     path: '/compare',
     name: 'Compare',
     component: Compare
+  },
+  {
+    path: '/contactUs',
+    name: 'contact-us',
+    component: ContactUs
   }
 ]
 
