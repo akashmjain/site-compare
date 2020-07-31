@@ -22,6 +22,9 @@
             </ul>
 		</div>
 	</div>
+	<div style="text-align:center">
+		<button class="btn-info">Provide Feedback</button>
+	</div>
     </div>
 
 </template>

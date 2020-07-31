@@ -1,11 +1,12 @@
 <template>
     
     <div class="header">
-        <h1 >Price Comparison Site</h1>
+        <h1>Price Comparison Site</h1>
         <div id="nav">
         <router-link to="/">Home</router-link> | 
         <router-link to="/about">About</router-link> |
-		<router-link to="/contactUs">Contact Us</router-link>
+        <router-link to="/contactUs">Contact Us</router-link> |
+        <router-link to="/feedback">Feedback</router-link>
         
         </div>
     </div>
@@ -18,6 +19,7 @@ export default {
 </script>
 
 <style scoped>
+	@import url('https://fonts.googleapis.com/css?family=Almendra+SC&display=swap');
     .header {
         background: #343148ff;
         color: #ffffff;
@@ -25,13 +27,15 @@ export default {
         padding: 10px;
 	}
 	.header h1 {
-			font-size : 48px ;
-			font-style : italic;
-			font-variant : small-caps;
-			font-family : 'Arial','sans-serif';	
+			font-size : 55px ;
+			font-family : 'Almendra SC','Arial','sans-serif';	
 	}
 	.header a{
 		color : #ffffff;
+		font-size : 1.2rem;
+	}
+	.header a:hover, a.router-link-exact-active {
+		color : #ffc832;
 	}
 	@media only screen and (max-width: 479px)
 	{
