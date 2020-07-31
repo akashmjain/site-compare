@@ -1,20 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Adamina&display=swap');
 #app{
 	background : #d7c49eff;
 	padding-bottom : 1%;
-}
-.media {
-	background : #d7c49eff;
 }
 .media img {
 		width : 300px;
 		height : 300px;
 		margin-left : 20%;
 	}
-.media-body	ul {
+.media-body ul {
 		margin-right : 4%;
 	}
+.about {
+	font-family : 'Adamina',sans-serif;
+}
+form {
+	text-align : left;
+	background : #08192c;
+	color : #ffffff;
+	margin-left : 30%;
+	margin-right : 30%;
+	margin-top : 1%;
+	padding : 1%;
+}
+label {
+	padding : 1%;
+	margin : 1%;
+}
 
-@media only screen and (max-width: 1280px)
+//Responsive
+
+	@media only screen and (max-width: 1280px)
 	{
 		.search_info {
 			padding-left : 10%;
@@ -48,6 +64,9 @@
 		}
 		.media h5 {
 			font-size : 1rem;
+		}
+		.contact-form {
+			width : 50%;
 		}
 	}
 
@@ -100,6 +119,10 @@
 		.media img {
 			margin-left : 25%;
 		}
+		.contact-form {
+			width : 70%;
+			margin-left : 13%;
+		}
 	}		
 
 	@media only screen and (max-width: 479px)
@@ -137,5 +160,9 @@
 		}
 		.media img {
 			margin-left : 15%;
+		}
+		.contact-form {
+			width : 98%;
+			margin-left : 1%;
 		}
 	}
