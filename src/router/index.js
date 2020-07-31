@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Compare from '../views/Compare.vue'
 import ContactUs from '../views/ContactUs'
+import Feedback from '../views/Feedback.vue'
 Vue.use(VueRouter)
 
   const routes = [
@@ -29,6 +30,11 @@ Vue.use(VueRouter)
     path: '/contactUs',
     name: 'contact-us',
     component: ContactUs
+  },
+  {
+    path: '/feedback',
+    name: 'Feedback',
+    component: Feedback
   }
 ]
 
