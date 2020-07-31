@@ -1,16 +1,21 @@
 <template>
-  <form class="contact-form" @submit.prevent="sendEmail">
+<div>
+  <form class="contact-form rounded" @submit.prevent="sendEmail">
     <label>Name</label>
-    <input type="text" name="user_name">
+    <input type="text" class="form-control" name="user_name" required="required"><br>
     <label>Email</label>
-    <input type="email" name="user_email">
+    <input type="email" class="form-control" name="user_email" required="required"><br>
     <label>Message</label>
-    <textarea name="message"></textarea>
-    <input type="submit" value="Send">
+    <textarea class="form-control" name="message"></textarea><br>
+    <input type="submit" class="btn btn-primary " value="Send" required="required">
   </form>
+</div>
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+import '../style/intern_project.css';
 import emailjs from 'emailjs-com';
 require('dotenv').config();
 export default {
@@ -33,5 +38,10 @@ export default {
 </script>
 
 <style scoped>
-
+	div {
+		background : #ffffff;
+		padding : 1%;
+		text-align : center;
+	}
+	
 </style>
