@@ -42,7 +42,7 @@ export default {
             axios.get(URL_Product).then(
                 (res) => {
                     // console.log(res.data)
-                    this.$router.push({ name:'Compare',params:{ data: res.data.data,  img: this.search_item.product_image, product_name: this.search_item.product_title, product_id: this.search_item.product_id } } );
+                    this.$router.push({ name:'Compare',params:{comments: this.$parent.all_comments, data: res.data.data,  img: this.search_item.product_image, product_name: this.search_item.product_title, product_id: this.search_item.product_id } } );
                 }).catch( err => console.log(err));  
 
             

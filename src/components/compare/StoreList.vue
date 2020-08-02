@@ -1,7 +1,7 @@
 <template>
    <div>
      <li class="list-group-item ml-3 " v-for="brand in brands" :key="brand.product_store">      
-         {{store}} 
+         
         <div class="media-body" id="delete_after_use">
 
                 <p class="h5">{{brand.product_store}}</p>

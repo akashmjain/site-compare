@@ -22,26 +22,69 @@
             </ul>
 		</div>
 	</div>
-	<div style="text-align:center">
-		<button class="btn-info">Provide Feedback</button>
+    <div class="mt-5">
+
+        <Comments v-bind:ind_comment="ind_comment" v-bind:all_comments="all_comments" v-bind:product_key="this.$route.params.product_id"/>
+    </div>
+	<div style="text-align:center" class="mt-5">
+		<button v-on:click="gotoFeedback" class="btn-info">Provide Feedback</button>
 	</div>
+    
     </div>
 
 </template>
 <script>
 import '../style/intern_project.css';
-import StoreList from '../components/compare/StoreList'
+import StoreList from '../components/compare/StoreList';
+// import CommentService from '../CommentService';
+import axios from 'axios';
+import Comments from '../components/comments/Comments'
+
 export default {
     name: "Compare",
     components: {
-        StoreList
+        StoreList,
+        Comments
     },
     data() {
         return {
             userData: [],
-            brand: ''
+            brand: '',
+            all_comments: [],
+            error: '',
+            ind_comment: []
+            
         }
+    },
+    async created() {
+        try {
+            // this.comments = await CommentService.getComments();
+            // getting comments in json format and storing those in comments array
+            const url = 'http://localhost:5000/api/comments';
+            axios.get(url)
+                .then( res => this.all_comments = res.data)
+                .catch( err => this.error = err.message) 
+        } catch (err) {
+            this.error = err.message;
+        }
+        console.log(this.all_comments)
+        this.ind_comment = this.all_comments.filter((element) => {
+            if(element.product_id === this.$route.params.product_id )
+            {
+                console.log(element);
+                return element;
+            }
+        })  
+        
     }
+    ,
+    methods: {
+        gotoFeedback() {
+            
+            this.$router.push({name : 'Feedback', params: {data: this.userData.stores, product_id: this.$route.params.product_id}})  
+        }
+    },
+    
 }
 </script>
 <style scoped>
