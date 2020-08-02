@@ -20,7 +20,7 @@ import axios from 'axios';
 
 
 // API key to get data from price-api dataset
-const API_KEY = 'dZBL0jdoxGMgGcOxH7Os6SKMgoa9WqUACR3';
+const API_KEY = process.env.VUE_APP_API_KEY;
 
 
 export default {

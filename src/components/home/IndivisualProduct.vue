@@ -22,7 +22,7 @@ import '../../style/intern_project.css';
 import axios from 'axios';
 require('dotenv').config();
 
-// const API_KEY = 'dZBL0jdoxGMgGcOxH7Os6SKMgoa9WqUACR3';
+
 const API_KEY = process.env.VUE_APP_API_KEY;
 
 
