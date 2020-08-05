@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="height:100vh;">
   <form class="contact-form rounded" @submit.prevent="sendEmail">
     <label>Name</label>
     <input type="text" class="form-control" name="user_name" required="required"><br>
