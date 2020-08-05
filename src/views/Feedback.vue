@@ -4,7 +4,7 @@
     <p hidden>{{$route.params.product_id}}</p>
     <h3><center><i>This is feedback form for the product chosen</i></center></h3>
 
-    <div class="container"> 
+    <div class="container feedback_page"> 
       <label for="site_name">Select Site Name *</label>
       <select class="form-control" v-model="user_brand">
         <option  :value="brand.product_store" v-for="brand in brands"  :key=brand>
@@ -32,7 +32,7 @@
         <label for="comment">Comment</label>
         <textarea class="form-control" v-model="user_comments"></textarea>
       </div>
-      <button class="mt-5" v-on:click="saveCommentToDatabase()">Send Comment</button>
+      <button class="mt-5 btn-primary" v-on:click="saveCommentToDatabase()">Send Comment</button>
     </div>
     
 
