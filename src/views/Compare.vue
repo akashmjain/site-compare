@@ -22,14 +22,12 @@
             </ul>
 		</div>
 	</div>
-    <div class="mt-5">
-
-        <Comments v-bind:ind_comment="ind_comment" v-bind:all_comments="all_comments" v-bind:product_key="this.$route.params.product_id"/>
-    </div>
 	<div style="text-align:center" class="mt-5">
 		<button v-on:click="gotoFeedback" class="btn-info">Provide Feedback</button>
 	</div>
-    
+    	<div class="mt-5">
+		<Comments v-bind:ind_comment="ind_comment" v-bind:all_comments="all_comments" v-bind:product_key="this.$route.params.product_id"/>
+        </div>
     </div>
 
 </template>
