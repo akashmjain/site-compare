@@ -41,6 +41,8 @@
 
 <script>
 import axios from 'axios'
+import '../style/intern_project.css';
+
 export default {
   
   name: "Feedback",
