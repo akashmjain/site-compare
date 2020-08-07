@@ -23,3 +23,4 @@
 
 source,
 we took the api written by http://datayuge.com/ for fetching the competatvive prices of a merchant. for getting your own api key visit http://price-api.datayuge.com 
+#### Note Still not refactored might be horrible coding style.
